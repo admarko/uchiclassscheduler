@@ -6,6 +6,10 @@ class Course < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :schedules,
+             :through => :slots,
+             :source => :schedule
+
   # Validations
 
 end

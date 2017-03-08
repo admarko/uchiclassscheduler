@@ -10,6 +10,10 @@ class Schedule < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :classes,
+             :through => :slots,
+             :source => :class
+
   # Validations
 
 end
