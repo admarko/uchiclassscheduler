@@ -21,7 +21,7 @@
       <% @slots.each do |slot| %>
       <tr>
         <td><%= slot.schedule.user_id %></td>
-        <td><%= slot.course_id %></td>
+        <td><%= slot.class.name %></td>
         <td><%= slot.year %></td>
         <td><%= slot.quarter %></td>
         <td><%= slot.completed %></td>
