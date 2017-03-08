@@ -23,3 +23,65 @@
     </div>
   </div>
 </div>
+
+<!-- A Schedule has many slots -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Slots
+      </li>
+
+      <% @schedule.slots.each do |slot| %>
+        <li class="list-group-item">
+          <a href="/slots/<%= slot.id %>">
+            <%= slot.schedule_id %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/slots/<%= slot.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/slots/<%= slot.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_slot/<%= slot.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A Schedule has many classes -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Classes
+      </li>
+
+      <% @schedule.classes.each do |course| %>
+        <li class="list-group-item">
+          <a href="/courses/<%= course.id %>">
+            <%= course.name %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/courses/<%= course.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/courses/<%= course.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_course/<%= course.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
