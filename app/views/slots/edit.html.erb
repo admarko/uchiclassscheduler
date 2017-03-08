@@ -24,7 +24,7 @@
           Schedule
         </label>
 
-        <input type="text" id="schedule_id" name="schedule_id" placeholder="Schedule" class="form-control" value="<%= @slot.schedule_id %>">
+        <%= select_tag(:schedule_id, options_from_collection_for_select(Schedule.all, :id, :user_id, @slot.schedule_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for course_id -->
