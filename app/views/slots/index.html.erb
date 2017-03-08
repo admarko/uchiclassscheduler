@@ -20,8 +20,20 @@
 
       <% @slots.each do |slot| %>
       <tr>
-        <td><%= slot.schedule.user_id %></td>
-        <td><%= slot.class.name %></td>
+        <td>
+          <% if slot.schedule.present? %>
+            <a href="/schedules/<%= slot.schedule.id %>">
+              <%= slot.schedule.user_id %>
+            </a>
+          <% end %>
+        </td>
+        <td>
+          <% if slot.class.present? %>
+            <a href="/courses/<%= slot.class.id %>">
+              <%= slot.class.name %>
+            </a>
+          <% end %>
+        </td>
         <td><%= slot.year %></td>
         <td><%= slot.quarter %></td>
         <td><%= slot.completed %></td>

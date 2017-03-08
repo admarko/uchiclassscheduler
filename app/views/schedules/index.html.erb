@@ -15,7 +15,13 @@
 
       <% @schedules.each do |schedule| %>
       <tr>
-        <td><%= schedule.student.name %></td>
+        <td>
+          <% if schedule.student.present? %>
+            <a href="/users/<%= schedule.student.id %>">
+              <%= schedule.student.name %>
+            </a>
+          <% end %>
+        </td>
         <td>
           <a href="/schedules/<%= schedule.id %>" class="btn btn-primary">Show</a>
           
