@@ -16,6 +16,7 @@ class SchedulesController < ApplicationController
   end
 
   def show
+    @slot = Slot.new
     @schedule = Schedule.find(params[:id])
 
     render("schedules/show.html.erb")

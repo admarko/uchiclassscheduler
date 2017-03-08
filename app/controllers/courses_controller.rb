@@ -6,6 +6,7 @@ class CoursesController < ApplicationController
   end
 
   def show
+    @slot = Slot.new
     @course = Course.find(params[:id])
 
     render("courses/show.html.erb")
