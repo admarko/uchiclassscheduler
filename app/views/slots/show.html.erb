@@ -1,0 +1,40 @@
+<div class="page-header">
+  <h3>Slot #<%= @slot.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Schedule</dt>
+      <dd><%= @slot.schedule_id %></dd>
+
+      <dt>Course</dt>
+      <dd><%= @slot.course_id %></dd>
+
+      <dt>Year</dt>
+      <dd><%= @slot.year %></dd>
+
+      <dt>Quarter</dt>
+      <dd><%= @slot.quarter %></dd>
+
+      <dt>Completed</dt>
+      <dd><%= @slot.completed %></dd>
+
+      <dt>Grade</dt>
+      <dd><%= @slot.grade %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/slots" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/slots/<%= @slot.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_slot/<%= @slot.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

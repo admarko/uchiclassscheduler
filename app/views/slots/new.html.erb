@@ -1,0 +1,81 @@
+<!-- Validation failure messages -->
+<% if @slot.errors.any? %>
+  <% @slot.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Slot</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_slot" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for schedule_id -->
+      <div class="form-group">
+        <label for="schedule_id" class="control-label">
+          Schedule
+        </label>
+
+        <input type="text" id="schedule_id" name="schedule_id" placeholder="Schedule" class="form-control" value="<%= @slot.schedule_id %>">
+      </div>
+
+      <!-- Label and input for course_id -->
+      <div class="form-group">
+        <label for="course_id" class="control-label">
+          Course
+        </label>
+
+        <input type="text" id="course_id" name="course_id" placeholder="Course" class="form-control" value="<%= @slot.course_id %>">
+      </div>
+
+      <!-- Label and input for year -->
+      <div class="form-group">
+        <label for="year" class="control-label">
+          Year
+        </label>
+
+        <input type="text" id="year" name="year" placeholder="Year" class="form-control" value="<%= @slot.year %>">
+      </div>
+
+      <!-- Label and input for quarter -->
+      <div class="form-group">
+        <label for="quarter" class="control-label">
+          Quarter
+        </label>
+
+        <input type="text" id="quarter" name="quarter" placeholder="Quarter" class="form-control" value="<%= @slot.quarter %>">
+      </div>
+
+      <!-- Label and input for completed -->
+      <div class="checkbox">
+        <label for="completed">
+          <input type="checkbox" id="completed" name="completed" value="1" <%= "checked" if @slot.completed %>>
+          Completed
+        </label>
+      </div>
+
+      <!-- Label and input for grade -->
+      <div class="form-group">
+        <label for="grade" class="control-label">
+          Grade
+        </label>
+
+        <input type="text" id="grade" name="grade" placeholder="Grade" class="form-control" value="<%= @slot.grade %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Slot
+      </button>
+      or
+      <a href="/slots">Cancel</a>
+    </form>
+  </div>
+</div>

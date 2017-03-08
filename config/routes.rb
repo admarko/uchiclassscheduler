@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Slot resource:
+  # CREATE
+  get "/slots/new", :controller => "slots", :action => "new"
+  post "/create_slot", :controller => "slots", :action => "create"
+
+  # READ
+  get "/slots", :controller => "slots", :action => "index"
+  get "/slots/:id", :controller => "slots", :action => "show"
+
+  # UPDATE
+  get "/slots/:id/edit", :controller => "slots", :action => "edit"
+  post "/update_slot/:id", :controller => "slots", :action => "update"
+
+  # DELETE
+  get "/delete_slot/:id", :controller => "slots", :action => "destroy"
+  #------------------------------
+
   # Routes for the Schedule resource:
   # CREATE
   get "/schedules/new", :controller => "schedules", :action => "new"
