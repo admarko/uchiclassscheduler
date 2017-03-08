@@ -33,7 +33,7 @@
           Course
         </label>
 
-        <input type="text" id="course_id" name="course_id" placeholder="Course" class="form-control" value="<%= @slot.course_id %>">
+        <%= select_tag(:course_id, options_from_collection_for_select(Course.all, :id, :name, @slot.course_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for year -->
