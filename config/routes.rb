@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "courses#index"
   # Routes for the Slot resource:
   # CREATE
   get "/slots/new", :controller => "slots", :action => "new"
