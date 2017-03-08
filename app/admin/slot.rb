@@ -1,5 +1,7 @@
 ActiveAdmin.register Slot do
 
+ permit_params :schedule_id, :course_id, :year, :quarter, :completed, :grade
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
