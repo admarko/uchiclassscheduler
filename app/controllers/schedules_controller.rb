@@ -47,8 +47,6 @@ class SchedulesController < ApplicationController
   def update
     @schedule = Schedule.find(params[:id])
 
-    @schedule.user_id = params[:user_id]
-
     save_status = @schedule.save
 
     if save_status == true
