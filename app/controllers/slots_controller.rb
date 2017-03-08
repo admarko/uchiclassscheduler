@@ -1,6 +1,7 @@
 class SlotsController < ApplicationController
   def index
-    @slots = Slot.page(params[:page]).per(10)
+    @q = Slot.ransack(params[:q])
+    @slots = @q.result(:distinct => true).includes(:class, :schedule).page(params[:page]).per(10)
 
     render("slots/index.html.erb")
   end

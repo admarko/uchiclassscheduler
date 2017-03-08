@@ -10,7 +10,8 @@ class SchedulesController < ApplicationController
   end
 
   def index
-    @schedules = Schedule.page(params[:page]).per(10)
+    @q = Schedule.ransack(params[:q])
+    @schedules = @q.result(:distinct => true).includes(:student, :slots, :classes).page(params[:page]).per(10)
 
     render("schedules/index.html.erb")
   end
