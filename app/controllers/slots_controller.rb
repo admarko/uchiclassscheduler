@@ -1,6 +1,6 @@
 class SlotsController < ApplicationController
   def index
-    @slots = Slot.all
+    @slots = Slot.page(params[:page]).per(10)
 
     render("slots/index.html.erb")
   end
