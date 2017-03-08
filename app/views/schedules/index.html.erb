@@ -15,7 +15,7 @@
 
       <% @schedules.each do |schedule| %>
       <tr>
-        <td><%= schedule.user_id %></td>
+        <td><%= schedule.student.name %></td>
         <td>
           <a href="/schedules/<%= schedule.id %>" class="btn btn-primary">Show</a>
           <a href="/schedules/<%= schedule.id %>/edit" class="btn btn-warning">Edit</a>
