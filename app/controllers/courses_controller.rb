@@ -1,7 +1,7 @@
 class CoursesController < ApplicationController
   def index
-    @q = Course.ransack(params[:q])
-    @courses = @q.result(:distinct => true).includes(:slots, :schedules).page(params[:page]).per(10)
+    @q = Course.order(:department).ransack(params[:q])
+    @courses = @q.result(:distinct => true).includes(:slots, :schedules).page(params[:page]).per(100)
 
     render("courses/index.html.erb")
   end

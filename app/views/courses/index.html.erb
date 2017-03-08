@@ -63,7 +63,7 @@
           });
       </script>
 
-        
+
 
       <%= f.submit :class => "btn btn-primary btn-block mb-1" %>
 
@@ -79,17 +79,18 @@
   <div class="col-md-12">
     <table class="table table-striped table-hover">
       <tr>
-        <th>Name</th>
-        <th>Dept code</th>
         <th>Department</th>
+        <th>Dept code</th>
+        <th>Name</th>
         <th>Actions</th>
       </tr>
 
       <% @courses.each do |course| %>
       <tr>
-        <td><%= course.name %></td>
-        <td><%= course.dept_code %></td>
+  
         <td><%= course.department %></td>
+        <td><%= course.dept_code %></td>
+        <td><%= course.name %></td>
         <td>
           <a href="/courses/<%= course.id %>" class="btn btn-primary">Show</a>
           <a href="/courses/<%= course.id %>/edit" class="btn btn-warning">Edit</a>
