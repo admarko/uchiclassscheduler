@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h3>Course #<%= @course.id %></h3>
+  <h3><%= @course.department %> <%= @course.dept_code %>: <%= @course.name %></h3>
 </div>
 
 <div class="row">
@@ -20,12 +20,6 @@
       <a href="/courses" class="btn btn-primary">
         Back
       </a>
-      <a href="/courses/<%= @course.id %>/edit" class="btn btn-warning">
-        Edit
-      </a>
-      <a href="/delete_course/<%= @course.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
-      </a>
     </div>
   </div>
 </div>
@@ -36,7 +30,7 @@
   <div class="col-md-12">
     <ul class="list-group">
       <li class="list-group-item list-group-item-info">
-        Slots
+        Add to schedule?
       </li>
 
       <% @course.slots.each do |slot| %>
@@ -111,7 +105,7 @@
       </div>
 
       <button class="btn btn-block btn-success">
-        Create Slot
+        Add to Schedule
       </button>
     </form>
       </li>

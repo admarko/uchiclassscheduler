@@ -39,7 +39,6 @@
         <th>Department</th>
         <th>Dept code</th>
         <th>Name</th>
-        <th>Actions</th>
       </tr>
 
       <% @courses.each do |course| %>
@@ -47,10 +46,7 @@
 
         <td><%= course.department %></td>
         <td><%= course.dept_code %></td>
-        <td><%= course.name %></td>
-        <td>
-          <a href="/courses/<%= course.id %>" class="btn btn-primary">Show</a>
-        </td>
+        <td><a href="/courses/<%= course.id %>"><%= course.name %></a></td>
       </tr>
       <% end %>
     </table>

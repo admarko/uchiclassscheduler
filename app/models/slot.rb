@@ -5,7 +5,7 @@ class Slot < ApplicationRecord
     :class_name => "Schedule",
     :foreign_key => "schedule_id"  #these were not put in?
 
-  belongs_to :class,
+  belongs_to :course,
              :class_name => "Course",
              :foreign_key => "course_id"
 

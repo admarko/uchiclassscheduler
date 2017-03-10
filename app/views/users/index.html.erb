@@ -1,7 +1,6 @@
 <div class="page-header">
   <h1>
     Users
-    <a href="/users/new" class="btn btn-lg btn-success">New User</a>
   </h1>
 </div>
 
@@ -12,19 +11,13 @@
         <th>Name</th>
         <th>Major</th>
         <th>Email</th>
-        <th>Password</th>
-        <th>Actions</th>
       </tr>
 
       <% @users.each do |user| %>
       <tr>
-        <td><%= user.name %></td>
+        <td><a href="/users/<%= user.id %>"><%= user.name %></a> </td>
         <td><%= user.major %></td>
         <td><%= user.email %></td>
-        <td><%= user.password %></td>
-        <td>
-          <a href="/users/<%= user.id %>" class="btn btn-primary">Show</a>
-        </td>
       </tr>
       <% end %>
     </table>
