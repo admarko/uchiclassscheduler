@@ -3,6 +3,16 @@ class CoursesController < ApplicationController
     @q = Course.order(:department, :dept_code).ransack(params[:q])
     @courses = @q.result(:distinct => true).includes(:slots, :schedules).page(params[:page]).per(100)
 
+    f = open(Rails.root.join("classes.json")).read
+    d = JSON.parse(f)
+    @array = []
+    d.each do |k|
+      temp = k.first.split(' ')
+      @array << temp.first
+      @array.uniq!
+      @array.sort!
+    end
+
     render("courses/index.html.erb")
   end
 

@@ -1,11 +1,10 @@
 # README
 
-This is my class scheduler app for UChicago. 
-
+This is my class scheduler app for UChicago. It was built using HTML5,
+CSS3/Bootstrap, and Ruby. 
 
 
 To use:
-
 1. Fork to own GitHub Repository
 2. Clone to Desktop
 3. Bundle install

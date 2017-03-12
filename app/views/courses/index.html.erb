@@ -2,9 +2,12 @@
   <h1>
     Course Catalog
   </h1>
-</div><div class="row mb-1">
-  <div class="col-md-12">
-    <%= search_form_for @q, :class => collapse_search_form, :id => "courses_filters" do |f| %>
+</div>
+
+
+<div class="row">
+  <div class="col-md-3">
+    <%= search_form_for @q, :id => "courses_filters" do |f| %>
     <p class="lead">Filter class search:</p>
 
     <div class="form-group">
@@ -13,27 +16,24 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :department_cont, "Department" %>
-      <%= f.text_field :department_cont, :class => "form-control", :placeholder => "Department" %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :dept_code_cont, "Dept code" %>
-      <%= f.text_field :dept_code_cont, :class => "form-control", :placeholder => "Dept code" %>
-    </div>
-
-    <%= f.submit :class => "btn btn-primary btn-block mb-1" %>
-
-    <a href="/courses" class="btn btn-default btn-block mb-1">Clear filters</a>
-    <% end %>
-    <a class="btn btn-default btn-block mb-1" data-toggle="collapse" href="#courses_filters">
-      Show Filters
-    </a>
+      <%= f.label :department_eq, "Department" %>
+    </br>
+    <%= f.select(:department_eq, options_for_select(@array), :class => "form-control") %>
   </div>
+
+  <div class="form-group">
+    <%= f.label :dept_code_cont, "Dept code" %>
+    <%= f.text_field :dept_code_cont, :class => "form-control", :placeholder => "Dept code" %>
+  </div>
+
+  <%= f.submit :class => "btn btn-primary btn-block mb-1" %>
+
+  <a href="/courses" class="btn btn-default btn-block mb-1">Clear filters</a>
+  <% end %>
 </div>
 
-<div class="row">
-  <div class="col-md-12">
+
+  <div class="col-md-9 col-offset-3">
     <table class="table table-striped table-hover">
       <tr>
         <th>Department</th>
