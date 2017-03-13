@@ -1,4 +1,5 @@
 <!-- Validation failure messages -->
+<link rel="stylesheet" type="text/css" href="new_form_style.css">
 <% if @schedule.errors.any? %>
   <% @schedule.errors.full_messages.each do |message| %>
     <div class="alert alert-dismissable alert-danger">
@@ -9,7 +10,10 @@
 <% end %>
 
 <div class="page-header">
-  <h3>Add Schedule</h3>
+  <h3>Make a Schedule</h3>
+  <span id="helpBlock" class="help-block">1. Select your current year and quarter </span>
+  <span id="helpBlock" class="help-block">2. List all courses you have currently taken</span>
+  <span id="helpBlock" class="help-block">3. List all courses you plan on taking</span>
 </div>
 
 <div class="row">
@@ -17,9 +21,200 @@
     <form action="/create_schedule" method="post">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
-
       <!-- Label and input for user_id -->
       <input type="hidden" name="user_id" value="<%= current_user.id %>">
+
+      <div class="form-group">
+        <label for="ff1" class="control-label">
+          What quarter are you currently in?
+        </label>
+        <div class="form-group form-inline">
+          <label for="quarter">Quarter:</label>
+          <select class="form-control" id="quarter">
+            <option>Fall</option>
+            <option>Winter</option>
+            <option>Spring</option>
+            <option>Summer</option>
+          </select>
+
+          <label for="year">Year:</label>
+          <select class="form-control" id="year">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Year 1 -->
+      <div class="row" style="padding-top: 30px;">
+        <!-- Fall -->
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+             <u> Year 1 Fall </u>
+          </label>
+          <div class="form-inline">
+            <label> Class 1: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 2: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f2d" name="1f2d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1f2c" name="1f2c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 3: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f3d" name="1f3d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1f3c" name="1f3c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 4: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f4d" name="1f4d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1f4c" name="1f4c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+        </div>
+
+        <!-- Winter -->
+        <div class="form-group col-md-4 col-offset-4">
+          <label for="1w" class="control-label">
+            <u> Year 1 Winter </u>
+          </label>
+          <div class="form-inline">
+            <label> Class 1: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="1w1d" name="1w1d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="1w1c" name="1w1c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 2: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="1w2d" name="1w2d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="1w2c" name="1w2c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 3: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="1w3d" name="1w3d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="1w3c" name="1w3c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 4: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="1w4d" name="1w4d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="1w4c" name="1w4c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+        </div>
+
+        <!-- Spring -->
+        <div class="form-group col-md-4 col-offset-8">
+          <label for="1s" class="control-label">
+            <u> Year 1 Spring </u>
+          </label>
+          <div class="form-inline">
+            <label> Class 1: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="1s1d" name="1s1d" for="inlineFormInput" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="1s1c" name="1s1c" for="inlineFormInput" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 2: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="1s2d" name="1s2d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="1s2c" name="1s2c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 3: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="1s3d" name="1s3d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="1s3c" name="1s3c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 4: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="1s4d" name="1s4d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="1s4c" name="1s4c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+        </div>
+      </div>
+
+      <!-- Year 2 -->
+      <div class="row" style="padding-top: 40px;">
+        <!-- Fall -->
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+             <u> Year 2 Fall </u>
+          </label>
+          <div class="form-inline">
+            <label> Class 1: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="2f1d" name="2f1d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="2f1c" name="2f1c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 2: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="2f2d" name="2f2d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="2f2c" name="2f2c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 3: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="2f3d" name="2f3d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="2f3c" name="2f3c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 4: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="2f4d" name="2f4d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="2f4c" name="2f4c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+        </div>
+
+        <!-- Winter -->
+        <div class="form-group col-md-4 col-offset-4">
+          <label for="1w" class="control-label">
+            <u> Year 2 Winter </u>
+          </label>
+          <div class="form-inline">
+            <label> Class 1: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="2w1d" name="2w1d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="2w1c" name="2w1c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 2: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="2w2d" name="2w2d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="2w2c" name="2w2c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 3: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="2w3d" name="2w3d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="2w3c" name="2w3c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 4: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="2w4d" name="2w4d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="2w4c" name="2w4c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+        </div>
+
+        <!-- Spring -->
+        <div class="form-group col-md-4 col-offset-8">
+          <label for="1s" class="control-label">
+            <u> Year 2 Spring </u>
+          </label>
+          <div class="form-inline">
+            <label> Class 1: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="2s1d" name="2s1d" for="inlineFormInput" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="2s1c" name="2s1c" for="inlineFormInput" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 2: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="2s2d" name="2s2d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="2s2c" name="2s2c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 3: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="2s3d" name="2s3d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="2s3c" name="2s3c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+          <div class="form-inline">
+            <label> Class 4: </label>
+            <input type="text" style="width: 80px; text-transform: uppercase;" id="2s4d" name="2s4d" placeholder="Dept" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 80px;" id="2s4c" name="2s4c" placeholder="Code" class="form-control" value="<%=  %>">
+          </div>
+        </div>
+      </div>
+
 
       <button class="btn btn-success">
         Create Schedule
