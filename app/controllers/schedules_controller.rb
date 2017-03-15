@@ -25,16 +25,41 @@ class SchedulesController < ApplicationController
 
   def new
     @schedule = Schedule.new
-
+    @array = [1,2,3,4]
     render("schedules/new.html.erb")
   end
 
   def create
     @schedule = Schedule.new
-
     @schedule.user_id = params[:user_id]
 
     save_status = @schedule.save
+
+    quarters = ["F", "W", "S"]
+    @y = 1
+    @q = 0
+    @s = 1
+    while @y < 4
+      while @q < 3
+        while @s < 4
+          @slot = Slot.new
+          @slot.year = params[:year]
+          @slot.quarter = params[:quarter]
+          @slot.schedule_id = @schedule.id
+          @d = @y #<< quarters[@q] << @s.to_s << "d"
+          @c = @y.to_s #<< quarters[@q] << @s.to_s << "c"
+          @slot.course_id = params[:course]
+          #if @slot.d != nil && @slot.c != nil
+          #  @slot.course_id = @d #Course.where({:department => @d, :dept_code => @c})
+          #end
+          @slot.save
+          @s += 1
+        end
+        @q += 1
+      end
+      @y += 1
+    end
+
 
     if save_status == true
       referer = URI(request.referer).path

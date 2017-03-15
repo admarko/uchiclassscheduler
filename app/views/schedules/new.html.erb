@@ -24,28 +24,18 @@
       <!-- Label and input for user_id -->
       <input type="hidden" name="user_id" value="<%= current_user.id %>">
 
-      <div class="form-group">
-        <label for="ff1" class="control-label">
-          What quarter are you currently in?
-        </label>
-        <div class="form-group form-inline">
-          <label for="quarter">Quarter:</label>
-          <select class="form-control" id="quarter">
-            <option>Fall</option>
-            <option>Winter</option>
-            <option>Spring</option>
-            <option>Summer</option>
-          </select>
 
-          <label for="year">Year:</label>
-          <select class="form-control" id="year">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-          </select>
-        </div>
-      </div>
+      <div class="form-group form-inline">
+       <label for="quarter" class="control-label">
+         Quarter
+       </label>
+        <%= select_tag(:quarter, options_for_select([" ", "Fall","Winter","Spring","Summer"]), :class => "form-control") %>
+
+       <label for="year" class="control-label">
+        Year
+        </label>
+        <%= select_tag(:year, options_for_select([" ", "1","2","3","4"]), :class => "form-control") %>
+    </div>
 
       <!-- Year 1 -->
       <div class="row" style="padding-top: 30px;">
@@ -56,8 +46,8 @@
           </label>
           <div class="form-inline">
             <label> Class 1: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <%= text_field_tag(:course, nil, placeholder: 'DEPT', maxlength: 4, size: 2, class: "form-control") %>
+            <%= text_field_tag(:course_code, nil, placeholder: 'XXXXX', maxlength: 5, size: 2, class: "form-control") %>
           </div>
           <div class="form-inline">
             <label> Class 2: </label>
