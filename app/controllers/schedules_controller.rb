@@ -35,24 +35,25 @@ class SchedulesController < ApplicationController
 
     save_status = @schedule.save
 
-    quarters = ["F", "W", "S"]
+    quarters = ["f", "w", "s"]
     @y = 1
-    @q = 0
-    @s = 1
-    while @y < 4
+    while @y < 5
+      @q = 0
       while @q < 3
-        while @s < 4
-          @slot = Slot.new
-          @slot.year = params[:year]
-          @slot.quarter = params[:quarter]
-          @slot.schedule_id = @schedule.id
-          @d = @y #<< quarters[@q] << @s.to_s << "d"
-          @c = @y.to_s #<< quarters[@q] << @s.to_s << "c"
-          @slot.course_id = params[:course]
-          #if @slot.d != nil && @slot.c != nil
-          #  @slot.course_id = @d #Course.where({:department => @d, :dept_code => @c})
-          #end
-          @slot.save
+        @s = 1
+        while @s < 5
+          @d = @y.to_s << quarters[@q] << @s.to_s << "d"
+          @c = @y.to_s << quarters[@q] << @s.to_s << "c"
+          if params[@d].present? && params[@c].present?
+            @slot = Slot.new
+            @slot.year = params[:year]
+            @slot.quarter = params[:quarter]
+            @slot.schedule_id = @schedule.id
+            @slot.course = Course.find_by({:department => params[@d], :dept_code => params[@c]})
+            if @slot.course
+              @slot.save
+            end
+          end
           @s += 1
         end
         @q += 1

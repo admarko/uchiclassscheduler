@@ -18,11 +18,15 @@
     <div>
       <p> Schedule: <%= @schedule.id  %> </p>
       courses:
-      <% Slot.all.each do |slot| %>
-      <% if slot.schedule_id == @schedule.id %>
-      <li> <%= slot.course_id %> </li>
+      <% @schedule.slots.each do |slot| %>
+        <button>
+          <a href="/courses/<%= Course.find(slot.course_id).id %>">
+            <%= Course.find(slot.course_id).department %>
+            <%= Course.find(slot.course_id).dept_code %>
+          </a>
+        </button>
       <% end %>
-      <% end %>
+
 
 
 
