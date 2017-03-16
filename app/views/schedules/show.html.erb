@@ -1,137 +1,220 @@
 <div class="page-header">
-  <h3>Schedule #<%= @schedule.id %></h3>
-</div>
+  <h3>Schedule #<%= @schedule.id %>
+    <% if @schedule.student.present? %>
+    by <a href="/users/<%= @schedule.user_id %>">
+      <%= @schedule.student.name %>
+    </a></h3>
+    <% end %>
+  </div>
 
-<div class="row">
-  <div class="col-md-12 mb-2">
-    <dl class="dl-horizontal">
-      <dt>User</dt>
-      <dd>
-        <% if @schedule.student.present? %>
-        <a href="/users/<%= @schedule.user_id %>">
-          <%= @schedule.student.name %>
+  <div class="row">
+    <div class="col-md-12 mb-2">
+      <div>
+        <table class="table table-striped table-bordered table-condensed">
+          <thead>
+            <tr>
+              <th class="text-center">1st Year</th>
+              <th class="text-center">Fall</th>
+              <th class="text-center">Winter</th>
+              <th class="text-center">Spring</th>
+            </tr>
+          </thead>
+          <tbody>
+              <th></th>
+              <td>
+                <% @schedule.slots.each do |slot| %>
+                <% if slot.quarter == "f" && slot.year = "1"%>
+                 <button class="btn btn-default btn-block">
+                   <a href="/courses/<%= Course.find(slot.course_id).id %>">
+                     <%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>
+                   </a>
+                 </button>
+                 </br>
+                 <% end %>
+                 <% end %>
+              </td>
+
+              <td>
+                <% @schedule.slots.each do |slot| %>
+                <% if slot.quarter == "w" && slot.year = "1"%>
+                 <button class="btn btn-default btn-block">
+                   <a href="/courses/<%= Course.find(slot.course_id).id %>">
+                     <%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>
+                   </a>
+                 </button>
+                </br>
+                 <% end %>
+                 <% end %>
+              </td>
+
+              <td>
+                <% @schedule.slots.each do |slot| %>
+                <% if slot.quarter == "s" && slot.year = "1"%>
+                 <button class="btn btn-default btn-block">
+                   <a href="/courses/<%= Course.find(slot.course_id).id %>">
+                     <%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>
+                   </a>
+                 </button>
+                 </br>
+                 <% end %>
+                 <% end %>
+              </td>
+
+          </tbody>
+          <thead>
+            <tr>
+              <th class="text-center">2st Year</th>
+              <th class="text-center">Fall</th>
+              <th class="text-center">Winter</th>
+              <th class="text-center">Spring</th>
+            </tr>
+          </thead>
+          <tbody>
+              <th></th>
+              <td>
+                <% @schedule.slots.each do |slot| %>
+                <% if slot.quarter == "f" && slot.year = "2"%>
+                 <button class="btn btn-default btn-block">
+                   <a href="/courses/<%= Course.find(slot.course_id).id %>">
+                     <%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>
+                   </a>
+                 </button>
+                 </br>
+                 <% end %>
+                 <% end %>
+              </td>
+
+              <td>
+                <% @schedule.slots.each do |slot| %>
+                <% if slot.quarter == "w" && slot.year = "2"%>
+                 <button class="btn btn-default btn-block">
+                   <a href="/courses/<%= Course.find(slot.course_id).id %>">
+                     <%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>
+                   </a>
+                 </button>
+                </br>
+                 <% end %>
+                 <% end %>
+              </td>
+
+              <td>
+                <% @schedule.slots.each do |slot| %>
+                <% if slot.quarter == "s" && slot.year = "2"%>
+                 <button class="btn btn-default btn-block">
+                   <a href="/courses/<%= Course.find(slot.course_id).id %>">
+                     <%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>
+                   </a>
+                 </button>
+                 </br>
+                 <% end %>
+                 <% end %>
+              </td>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="btn-group btn-group-justified">
+        <a href="/schedules" class="btn btn-primary">
+          Back
+        </a>
+        <% if current_user == @schedule.student %>
+        <a href="/schedules/<%= @schedule.id %>/edit" class="btn btn-warning">
+          Edit
+        </a>
+        <a href="/delete_schedule/<%= @schedule.id %>" class="btn btn-danger" rel="nofollow">
+          Delete
         </a>
         <% end %>
-      </dd>
-    </dl>
-
-    <div>
-      <p> Schedule: <%= @schedule.id  %> </p>
-      courses:
-      <% @schedule.slots.each do |slot| %>
-        <button>
-          <a href="/courses/<%= Course.find(slot.course_id).id %>">
-            <%= Course.find(slot.course_id).department %>
-            <%= Course.find(slot.course_id).dept_code %>
-          </a>
-        </button>
-      <% end %>
-
-
-
-
-
-
-    </div>
-
-    <div class="btn-group btn-group-justified">
-      <a href="/schedules" class="btn btn-primary">
-        Back
-      </a>
-      <% if current_user == @schedule.student %>
-      <a href="/schedules/<%= @schedule.id %>/edit" class="btn btn-warning">
-        Edit
-      </a>
-      <a href="/delete_schedule/<%= @schedule.id %>" class="btn btn-danger" rel="nofollow">
-        Delete
-      </a>
-      <% end %>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- A Schedule has many slots -->
+  <!-- A Schedule has many slots -->
 
-<div class="row">
-  <div class="col-md-8">
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-info">
-        Add a Class
-      </li>
-
+  <div class="row">
+    <div class="col-md-8">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-info">
+          Add a Class
+        </li>
 
 
 
-      <li class="list-group-item">
-        <form action="/create_slot" method="post">
-          <!-- Hidden input for authenticity token to protect from forgery -->
-          <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
-          <!-- Label and input for schedule_id -->
-          <input type="hidden" name="schedule_id" value="<%= @schedule.id %>">
+        <li class="list-group-item">
+          <form action="/create_slot" method="post">
+            <!-- Hidden input for authenticity token to protect from forgery -->
+            <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
-          <div class="form-group form-inline">
-            <label> Class: </label>
-            <%= text_field_tag(:course, nil, placeholder: 'DEPT', maxlength: 4, size: 2, class: "form-control") %>
-            <%= text_field_tag(:course_code, nil, placeholder: 'XXXXX', maxlength: 5, size: 2, class: "form-control") %>
+            <!-- Label and input for schedule_id -->
+            <input type="hidden" name="schedule_id" value="<%= @schedule.id %>">
 
-            <label for="completed">
-              Completed
-              <input type="checkbox" id="completed" name="completed" value="1" <%= "checked" if @slot.completed %>>
-            </label>
+            <div class="form-group form-inline">
+              <label> Class: </label>
+              <%= text_field_tag(:course, nil, placeholder: 'DEPT', maxlength: 4, size: 2, class: "form-control") %>
+              <%= text_field_tag(:course_code, nil, placeholder: 'XXXXX', maxlength: 5, size: 2, class: "form-control") %>
 
-            <label for="quarter" class="control-label">
-              Quarter
-            </label>
-            <%= select_tag(:quarter, options_for_select([" ", "Fall","Winter","Spring","Summer"]), :class => "form-control") %>
+              <label for="completed">
+                Completed
+                <input type="checkbox" id="completed" name="completed" value="1" <%= "checked" if @slot.completed %>>
+              </label>
 
-            <label for="year" class="control-label">
-              Year
-            </label>
-            <%= select_tag(:year, options_for_select([" ", "1","2","3","4"]), :class => "form-control") %>
+              <label for="quarter" class="control-label">
+                Quarter
+              </label>
+              <%= select_tag(:quarter, options_for_select([" ", "Fall","Winter","Spring","Summer"]), :class => "form-control") %>
 
-            <label for="year" class="control-label">
-              Grade
-            </label>
-            <%= select_tag(:grade, options_for_select([" ", "A","A-","B+","B", "B-", "C+", "C", "C-", "D+", "D", "F"]), :class => "form-control") %>
+              <label for="year" class="control-label">
+                Year
+              </label>
+              <%= select_tag(:year, options_for_select([" ", "1","2","3","4"]), :class => "form-control") %>
+
+              <label for="year" class="control-label">
+                Grade
+              </label>
+              <%= select_tag(:grade, options_for_select([" ", "A","A-","B+","B", "B-", "C+", "C", "C-", "D+", "D", "F"]), :class => "form-control") %>
+            </div>
+
+            <button class="btn btn-block btn-success">
+              Create Slot
+            </button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- A Schedule has many classes -->
+
+  <div class="row">
+    <div class="col-md-4">
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-info">
+          Additional Classes
+        </li>
+
+        <% @schedule.courses.each do |course| %>
+        <li class="list-group-item">
+          <a href="/courses/<%= course.id %>">
+            <%= course.name %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/courses/<%= course.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/delete_course/<%= course.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
           </div>
-
-          <button class="btn btn-block btn-success">
-            Create Slot
-          </button>
-        </form>
-      </li>
-    </ul>
+        </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-</div>
-
-<!-- A Schedule has many classes -->
-
-<div class="row">
-  <div class="col-md-4">
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-info">
-        Additional Classes
-      </li>
-
-      <% @schedule.courses.each do |course| %>
-      <li class="list-group-item">
-        <a href="/courses/<%= course.id %>">
-          <%= course.name %>
-        </a>
-        <div class="btn-group btn-group-xs pull-right">
-          <a href="/courses/<%= course.id %>" class="btn btn-primary">
-            <i class="fa fa-search-plus"></i>
-          </a>
-          <a href="/courses/<%= course.id %>/edit" class="btn btn-warning">
-            <i class="fa fa-edit"></i>
-          </a>
-          <a href="/delete_course/<%= course.id %>" class="btn btn-danger" rel="nofollow">
-            <i class="fa fa-trash-o"></i>
-          </a>
-        </div>
-      </li>
-      <% end %>
-    </ul>
-  </div>
-</div>

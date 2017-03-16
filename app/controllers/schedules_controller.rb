@@ -46,8 +46,8 @@ class SchedulesController < ApplicationController
           @c = @y.to_s << quarters[@q] << @s.to_s << "c"
           if params[@d].present? && params[@c].present?
             @slot = Slot.new
-            @slot.year = params[:year]
-            @slot.quarter = params[:quarter]
+            @slot.year = @y.to_s
+            @slot.quarter = quarters[@q]
             @slot.schedule_id = @schedule.id
             @slot.course = Course.find_by({:department => params[@d], :dept_code => params[@c]})
             if @slot.course
