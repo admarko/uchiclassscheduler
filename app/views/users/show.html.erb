@@ -36,7 +36,7 @@
       <% @user.schedules.each do |schedule| %>
         <li class="list-group-item">
           <a href="/schedules/<%= schedule.id %>">
-            <%= schedule.user_id %>
+            Schedule <%= schedule.id %>
           </a>
           <div class="btn-group btn-group-xs pull-right">
             <a href="/schedules/<%= schedule.id %>" class="btn btn-primary">

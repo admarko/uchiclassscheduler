@@ -13,3 +13,4 @@ d.each do |k|
   temp = k.first.split(' ')
   Course.create(name: k.last["name"], dept_code: temp.last, department: temp.first)
 end
+Course.create(name: "Application Development", dept_code: "33610", department: "BUSN")

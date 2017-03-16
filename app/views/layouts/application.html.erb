@@ -48,8 +48,13 @@
         <ul class="nav navbar-nav navbar-right"><i class="fa fa-user-o" aria-hidden="true"></i>
           <% if current_user.present? %>
             <li>
-              <a href="/users/edit">
+              <a href="/users/<%= current_user.id %>">
                 <%= current_user.name %>
+              </a>
+            </li>
+            <li>
+              <a href="/users/edit">
+                Settings
               </a>
             </li>
 

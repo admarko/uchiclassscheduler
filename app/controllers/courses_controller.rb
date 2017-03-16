@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
 
     f = open(Rails.root.join("classes.json")).read
     d = JSON.parse(f)
-    @array = [" "]
+    @array = [" ", "BUSN"]
     d.each do |k|
       temp = k.first.split(' ')
       @array << temp.first
