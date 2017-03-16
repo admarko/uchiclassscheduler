@@ -23,8 +23,8 @@
               <th></th>
               <td>
                 <% @schedule.slots.each do |slot| %>
-                <% if slot.quarter == "f" && slot.year = "1"%>
-                 <button class="btn btn-default btn-block">
+                <% if slot.quarter == "f" && slot.year == "1"%>
+                 <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
                      <%= Course.find(slot.course_id).department %>
                      <%= Course.find(slot.course_id).dept_code %>
@@ -37,8 +37,8 @@
 
               <td>
                 <% @schedule.slots.each do |slot| %>
-                <% if slot.quarter == "w" && slot.year = "1"%>
-                 <button class="btn btn-default btn-block">
+                <% if slot.quarter == "w" && slot.year == "1"%>
+                 <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
                      <%= Course.find(slot.course_id).department %>
                      <%= Course.find(slot.course_id).dept_code %>
@@ -51,8 +51,8 @@
 
               <td>
                 <% @schedule.slots.each do |slot| %>
-                <% if slot.quarter == "s" && slot.year = "1"%>
-                 <button class="btn btn-default btn-block">
+                <% if slot.quarter == "s" && slot.year == "1"%>
+                 <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
                      <%= Course.find(slot.course_id).department %>
                      <%= Course.find(slot.course_id).dept_code %>
@@ -76,8 +76,8 @@
               <th></th>
               <td>
                 <% @schedule.slots.each do |slot| %>
-                <% if slot.quarter == "f" && slot.year = "2"%>
-                 <button class="btn btn-default btn-block">
+                <% if slot.quarter == "f" && slot.year == "2"%>
+                 <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
                      <%= Course.find(slot.course_id).department %>
                      <%= Course.find(slot.course_id).dept_code %>
@@ -90,8 +90,8 @@
 
               <td>
                 <% @schedule.slots.each do |slot| %>
-                <% if slot.quarter == "w" && slot.year = "2"%>
-                 <button class="btn btn-default btn-block">
+                <% if slot.quarter == "w" && slot.year == "2"%>
+                 <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
                      <%= Course.find(slot.course_id).department %>
                      <%= Course.find(slot.course_id).dept_code %>
@@ -104,8 +104,8 @@
 
               <td>
                 <% @schedule.slots.each do |slot| %>
-                <% if slot.quarter == "s" && slot.year = "2"%>
-                 <button class="btn btn-default btn-block">
+                <% if slot.quarter == "s" && slot.year == "2"%>
+                 <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
                      <%= Course.find(slot.course_id).department %>
                      <%= Course.find(slot.course_id).dept_code %>
@@ -116,6 +116,111 @@
                  <% end %>
               </td>
 
+          </tbody>
+          <thead>
+            <tr>
+              <th class="text-center">3rd Year</th>
+              <th class="text-center">Fall</th>
+              <th class="text-center">Winter</th>
+              <th class="text-center">Spring</th>
+            </tr>
+          </thead>
+          <tbody>
+              <th></th>
+              <td>
+                <% @schedule.slots.each do |slot| %>
+                <% if slot.quarter == "f" && slot.year == "3"%>
+                 <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
+                   <a href="/courses/<%= Course.find(slot.course_id).id %>">
+                     <%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>
+                   </a>
+                 </button>
+                 </br>
+                 <% end %>
+                 <% end %>
+              </td>
+
+              <td>
+                <% @schedule.slots.each do |slot| %>
+                <% if slot.quarter == "w" && slot.year == "3"%>
+                 <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
+                   <a href="/courses/<%= Course.find(slot.course_id).id %>">
+                     <%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>
+                   </a>
+                 </button>
+                </br>
+                 <% end %>
+                 <% end %>
+              </td>
+
+              <td>
+                <% @schedule.slots.each do |slot| %>
+                <% if slot.quarter == "s" && slot.year == "3"%>
+                 <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
+                   <a href="/courses/<%= Course.find(slot.course_id).id %>">
+                     <%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>
+                   </a>
+                 </button>
+                 </br>
+                 <% end %>
+                 <% end %>
+              </td>
+
+          </tbody>
+          <thead>
+            <tr>
+              <th class="text-center">4th Year</th>
+              <th class="text-center">Fall</th>
+              <th class="text-center">Winter</th>
+              <th class="text-center">Spring</th>
+            </tr>
+          </thead>
+          <tbody>
+              <th></th>
+              <td>
+                <% @schedule.slots.each do |slot| %>
+                <% if slot.quarter == "f" && slot.year == "4"%>
+                 <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
+                   <a href="/courses/<%= Course.find(slot.course_id).id %>">
+                     <%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>
+                   </a>
+                 </button>
+                 </br>
+                 <% end %>
+                 <% end %>
+              </td>
+
+              <td>
+                <% @schedule.slots.each do |slot| %>
+                <% if slot.quarter == "w" && slot.year == "4"%>
+                 <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
+                   <a href="/courses/<%= Course.find(slot.course_id).id %>">
+                     <%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>
+                   </a>
+                 </button>
+                </br>
+                 <% end %>
+                 <% end %>
+              </td>
+
+              <td>
+                <% @schedule.slots.each do |slot| %>
+                <% if slot.quarter == "s" && slot.year == "4"%>
+                 <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
+                   <a href="/courses/<%= Course.find(slot.course_id).id %>">
+                     <%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>
+                   </a>
+                 </button>
+                 </br>
+                 <% end %>
+                 <% end %>
+              </td>
           </tbody>
         </table>
       </div>
@@ -144,9 +249,6 @@
         <li class="list-group-item list-group-item-info">
           Add a Class
         </li>
-
-
-
 
         <li class="list-group-item">
           <form action="/create_slot" method="post">
