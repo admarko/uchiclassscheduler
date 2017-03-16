@@ -14,6 +14,7 @@
       </tr>
 
       <% @schedules.each do |schedule| %>
+      <% if schedule.student == current_user %>
       <tr>
         <td>
           <% if schedule.student.present? %>
@@ -23,14 +24,14 @@
           <% end %>
         </td>
         <td>
-          <a href="/schedules/<%= schedule.id %>" class="btn btn-primary">Show</a>
-
           <% if current_user == schedule.student %>
+            <a href="/schedules/<%= schedule.id %>" class="btn btn-primary">Show</a>
             <a href="/schedules/<%= schedule.id %>/edit" class="btn btn-warning">Edit</a>
             <a href="/delete_schedule/<%= schedule.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
           <% end %>
         </td>
       </tr>
+      <% end %>
       <% end %>
     </table>
     <%= paginate @schedules, theme: 'twitter-bootstrap-4' %>
