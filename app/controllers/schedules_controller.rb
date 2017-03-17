@@ -95,6 +95,40 @@ class SchedulesController < ApplicationController
 
     save_status = @schedule.save
 
+    quarters = ["f", "w", "s"]
+    @y = 1
+    while @y < 5
+      @q = 0
+      while @q < 3
+        @s = 1
+        while @s < 5
+          @d = @y.to_s << quarters[@q] << @s.to_s << "d"
+          @c = @y.to_s << quarters[@q] << @s.to_s << "c"
+          if params[@d].present? && params[@c].present?
+            @slot = Slot.new
+            @slot.year = @y.to_s
+            @slot.quarter = quarters[@q]
+            @slot.schedule_id = @schedule.id
+            @slot.course = Course.find_by({:department => params[@d].upcase.strip, :dept_code => params[@c]})
+            if @slot.course
+              @slot.save
+              if @slot.persisted?
+                Rails.logger.warn("created slot #{@slot.id}") #for debugging help
+              end
+            else
+              Rails.logger.warn("No course for @d #{params[@d]} @c #{params[@c]}") #for debugging help
+
+            end
+          end
+          @s += 1
+        end
+        @q += 1
+      end
+      @y += 1
+    end
+
+
+
     if save_status == true
       referer = URI(request.referer).path
 

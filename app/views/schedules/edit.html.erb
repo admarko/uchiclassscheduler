@@ -28,8 +28,10 @@
           <label for="1f" id="1f">
             <u> Year 1 Fall </u>
           </label>
+          <% unused = 4 %>
           <% Slot.all.each do |slot| %>
           <% if slot.quarter == "f" && slot.year == "1" %>
+          <% unused = unused - 1 %>
           <div class="form-inline">
             <label> Class: </label>
             <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
@@ -37,13 +39,26 @@
           </div>
           <% end %>
           <% end %>
+          <% while unused > 0 %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" placeholder="DEPT" %>
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" placeholder="XXXXX">
+          </div>
+
+          <% unused = unused - 1 %>
+          <% end %>
         </div>
+
+        <!-- Winter -->
         <div class="form-group col-md-4">
-          <label for="1f" id="1f">
+          <label for="1w" id="1w">
             <u> Year 1 Winter </u>
           </label>
+          <% unused = 4 %>
           <% Slot.all.each do |slot| %>
           <% if slot.quarter == "w" && slot.year == "1" %>
+          <% unused = unused - 1 %>
           <div class="form-inline">
             <label> Class: </label>
             <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
@@ -51,14 +66,26 @@
           </div>
           <% end %>
           <% end %>
+          <% while unused > 0 %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" placeholder="DEPT" %>
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" placeholder="XXXXX">
+          </div>
+
+          <% unused = unused - 1 %>
+          <% end %>
         </div>
 
+        <!-- Spring -->
         <div class="form-group col-md-4">
-          <label for="1f" id="1f">
+          <label for="1s" id="1s">
             <u> Year 1 Spring </u>
           </label>
+          <% unused = 4 %>
           <% Slot.all.each do |slot| %>
           <% if slot.quarter == "s" && slot.year == "1" %>
+          <% unused = unused - 1 %>
           <div class="form-inline">
             <label> Class: </label>
             <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
@@ -66,18 +93,29 @@
           </div>
           <% end %>
           <% end %>
+          <% while unused > 0 %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" placeholder="DEPT" %>
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" placeholder="XXXXX">
+          </div>
+
+          <% unused = unused - 1 %>
+          <% end %>
         </div>
       </div>
 
-      <!-- Year 1 -->
+      <!-- Year 2 -->
       <div class="row" style="padding-top: 30px;">
         <!-- Fall -->
         <div class="form-group col-md-4">
-          <label for="1f" id="1f">
+          <label for="2f" id="2f">
             <u> Year 2 Fall </u>
           </label>
+          <% unused = 4 %>
           <% Slot.all.each do |slot| %>
           <% if slot.quarter == "f" && slot.year == "2" %>
+          <% unused = unused - 1 %>
           <div class="form-inline">
             <label> Class: </label>
             <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
@@ -85,13 +123,26 @@
           </div>
           <% end %>
           <% end %>
+          <% while unused > 0 %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" placeholder="DEPT" %>
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" placeholder="XXXXX">
+          </div>
+
+          <% unused = unused - 1 %>
+          <% end %>
         </div>
+
+        <!-- Winter -->
         <div class="form-group col-md-4">
-          <label for="1f" id="1f">
+          <label for="2w" id="2w">
             <u> Year 2 Winter </u>
           </label>
+          <% unused = 4 %>
           <% Slot.all.each do |slot| %>
           <% if slot.quarter == "w" && slot.year == "2" %>
+          <% unused = unused - 1 %>
           <div class="form-inline">
             <label> Class: </label>
             <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
@@ -99,14 +150,26 @@
           </div>
           <% end %>
           <% end %>
+          <% while unused > 0 %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" placeholder="DEPT" %>
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" placeholder="XXXXX">
+          </div>
+
+          <% unused = unused - 1 %>
+          <% end %>
         </div>
 
+        <!-- Spring -->
         <div class="form-group col-md-4">
-          <label for="1f" id="1f">
+          <label for="2s" id="2s">
             <u> Year 2 Spring </u>
           </label>
+          <% unused = 4 %>
           <% Slot.all.each do |slot| %>
           <% if slot.quarter == "s" && slot.year == "2" %>
+          <% unused = unused - 1 %>
           <div class="form-inline">
             <label> Class: </label>
             <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
@@ -114,18 +177,29 @@
           </div>
           <% end %>
           <% end %>
+          <% while unused > 0 %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" placeholder="DEPT" %>
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" placeholder="XXXXX">
+          </div>
+
+          <% unused = unused - 1 %>
+          <% end %>
         </div>
       </div>
 
-      <!-- Year 1 -->
+      <!-- Year 3 -->
       <div class="row" style="padding-top: 30px;">
         <!-- Fall -->
         <div class="form-group col-md-4">
-          <label for="1f" id="1f">
+          <label for="3f" id="3f">
             <u> Year 3 Fall </u>
           </label>
+          <% unused = 4 %>
           <% Slot.all.each do |slot| %>
           <% if slot.quarter == "f" && slot.year == "3" %>
+          <% unused = unused - 1 %>
           <div class="form-inline">
             <label> Class: </label>
             <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
@@ -133,47 +207,83 @@
           </div>
           <% end %>
           <% end %>
-        </div>
-        <div class="form-group col-md-4">
-          <label for="1f" id="1f">
-            <u> Year 3 Winter </u>
-          </label>
-          <% Slot.all.each do |slot| %>
-          <% if slot.quarter == "w" && slot.year == "3" %>
+          <% while unused > 0 %>
           <div class="form-inline">
             <label> Class: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
-            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" placeholder="DEPT" %>
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" placeholder="XXXXX">
           </div>
-          <% end %>
+
+          <% unused = unused - 1 %>
           <% end %>
         </div>
 
+        <!-- Winter -->
         <div class="form-group col-md-4">
-          <label for="1f" id="1f">
-            <u> Year 3 Spring </u>
+          <label for="3w" id="3w">
+            <u> Year 2 Winter </u>
           </label>
+          <% unused = 4 %>
           <% Slot.all.each do |slot| %>
-          <% if slot.quarter == "s" && slot.year == "3" %>
+          <% if slot.quarter == "w" && slot.year == "3" %>
+          <% unused = unused - 1 %>
           <div class="form-inline">
             <label> Class: </label>
             <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
             <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
           </div>
           <% end %>
+          <% end %>
+          <% while unused > 0 %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" placeholder="DEPT" %>
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" placeholder="XXXXX">
+          </div>
+
+          <% unused = unused - 1 %>
+          <% end %>
+        </div>
+
+        <!-- Spring -->
+        <div class="form-group col-md-4">
+          <label for="3s" id="3s">
+            <u> Year 3 Spring </u>
+          </label>
+          <% unused = 4 %>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "s" && slot.year == "3" %>
+          <% unused = unused - 1 %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+          <% while unused > 0 %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" placeholder="DEPT" %>
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" placeholder="XXXXX">
+          </div>
+
+          <% unused = unused - 1 %>
           <% end %>
         </div>
       </div>
 
-      <!-- Year 1 -->
+      <!-- Year 4 -->
       <div class="row" style="padding-top: 30px;">
         <!-- Fall -->
         <div class="form-group col-md-4">
-          <label for="1f" id="1f">
+          <label for="4f" id="4f">
             <u> Year 4 Fall </u>
           </label>
+          <% unused = 4 %>
           <% Slot.all.each do |slot| %>
           <% if slot.quarter == "f" && slot.year == "4" %>
+          <% unused = unused - 1 %>
           <div class="form-inline">
             <label> Class: </label>
             <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
@@ -181,34 +291,68 @@
           </div>
           <% end %>
           <% end %>
-        </div>
-        <div class="form-group col-md-4">
-          <label for="1f" id="1f">
-            <u> Year 4 Winter </u>
-          </label>
-          <% Slot.all.each do |slot| %>
-          <% if slot.quarter == "w" && slot.year == "4" %>
+          <% while unused > 0 %>
           <div class="form-inline">
             <label> Class: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
-            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" placeholder="DEPT" %>
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" placeholder="XXXXX">
           </div>
-          <% end %>
+
+          <% unused = unused - 1 %>
           <% end %>
         </div>
 
+        <!-- Winter -->
         <div class="form-group col-md-4">
-          <label for="1f" id="1f">
-            <u> Year 4 Spring </u>
+          <label for="4w" id="4w">
+            <u> Year 4 Winter </u>
           </label>
+          <% unused = 4 %>
           <% Slot.all.each do |slot| %>
-          <% if slot.quarter == "s" && slot.year == "4" %>
+          <% if slot.quarter == "w" && slot.year == "4" %>
+          <% unused = unused - 1 %>
           <div class="form-inline">
             <label> Class: </label>
             <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
             <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
           </div>
           <% end %>
+          <% end %>
+          <% while unused > 0 %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" placeholder="DEPT" %>
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" placeholder="XXXXX">
+          </div>
+
+          <% unused = unused - 1 %>
+          <% end %>
+        </div>
+
+        <!-- Spring -->
+        <div class="form-group col-md-4">
+          <label for="4s" id="4s">
+            <u> Year 4 Spring </u>
+          </label>
+          <% unused = 4 %>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "s" && slot.year == "4" %>
+          <% unused = unused - 1 %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+          <% while unused > 0 %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" placeholder="DEPT" %>
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" placeholder="XXXXX">
+          </div>
+
+          <% unused = unused - 1 %>
           <% end %>
         </div>
       </div>
