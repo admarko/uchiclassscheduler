@@ -1,11 +1,11 @@
 <!-- Validation failure messages -->
 <% if @schedule.errors.any? %>
-  <% @schedule.errors.full_messages.each do |message| %>
-    <div class="alert alert-dismissable alert-danger">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <%= message %>
-    </div>
-  <% end %>
+<% @schedule.errors.full_messages.each do |message| %>
+<div class="alert alert-dismissable alert-danger">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <%= message %>
+</div>
+<% end %>
 <% end %>
 
 <div class="page-header">
@@ -18,8 +18,201 @@
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
-      
-      
+      <!-- Label and input for user_id -->
+      <input type="hidden" name="user_id" value="<%= current_user.id %>">
+
+      <!-- Year 1 -->
+      <div class="row" style="padding-top: 30px;">
+        <!-- Fall -->
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+            <u> Year 1 Fall </u>
+          </label>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "f" && slot.year == "1" %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+            <u> Year 1 Winter </u>
+          </label>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "w" && slot.year == "1" %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+            <u> Year 1 Spring </u>
+          </label>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "s" && slot.year == "1" %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Year 1 -->
+      <div class="row" style="padding-top: 30px;">
+        <!-- Fall -->
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+            <u> Year 2 Fall </u>
+          </label>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "f" && slot.year == "2" %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+            <u> Year 2 Winter </u>
+          </label>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "w" && slot.year == "2" %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+            <u> Year 2 Spring </u>
+          </label>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "s" && slot.year == "2" %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Year 1 -->
+      <div class="row" style="padding-top: 30px;">
+        <!-- Fall -->
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+            <u> Year 3 Fall </u>
+          </label>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "f" && slot.year == "3" %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+            <u> Year 3 Winter </u>
+          </label>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "w" && slot.year == "3" %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+            <u> Year 3 Spring </u>
+          </label>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "s" && slot.year == "3" %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <!-- Year 1 -->
+      <div class="row" style="padding-top: 30px;">
+        <!-- Fall -->
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+            <u> Year 4 Fall </u>
+          </label>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "f" && slot.year == "4" %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+            <u> Year 4 Winter </u>
+          </label>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "w" && slot.year == "4" %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="1f" id="1f">
+            <u> Year 4 Spring </u>
+          </label>
+          <% Slot.all.each do |slot| %>
+          <% if slot.quarter == "s" && slot.year == "4" %>
+          <div class="form-inline">
+            <label> Class: </label>
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" maxlength=4 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).department  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" maxlength=5 autocomplete="off" class="form-control" value="<%= Course.find(slot.course_id).dept_code  %>">
+          </div>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+
 
       <button class="btn btn-warning">
         Update Schedule

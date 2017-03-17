@@ -85,6 +85,8 @@ class SchedulesController < ApplicationController
   def edit
     @schedule = Schedule.find(params[:id])
 
+
+
     render("schedules/edit.html.erb")
   end
 
