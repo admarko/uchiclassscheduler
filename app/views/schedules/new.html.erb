@@ -1,5 +1,6 @@
-<!-- Validation failure messages -->
-<link rel="stylesheet" type="text/css" href="new_form_style.css">
+<!-- Validation failure messages
+<link rel="stylesheet" type="text/css" href="new_form_style.css">-->
+
 <% if @schedule.errors.any? %>
 <% @schedule.errors.full_messages.each do |message| %>
 <div class="alert alert-dismissable alert-danger">
@@ -46,23 +47,23 @@
           </label>
           <div class="form-inline">
             <label> Class 1: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f1d" name="1f1d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1f1c" name="1f1c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 2: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f2d" name="1f2d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="1f2c" name="1f2c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f2d" name="1f2d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1f2c" name="1f2c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 3: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f3d" name="1f3d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="1f3c" name="1f3c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f3d" name="1f3d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1f3c" name="1f3c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 4: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f4d" name="1f4d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="1f4c" name="1f4c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1f4d" name="1f4d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1f4c" name="1f4c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
         </div>
 
@@ -73,23 +74,23 @@
           </label>
           <div class="form-inline">
             <label> Class 1: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1w1d" name="1w1d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="1w1c" name="1w1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1w1d" name="1w1d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1w1c" name="1w1c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 2: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1w2d" name="1w2d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="1w2c" name="1w2c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1w2d" name="1w2d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1w2c" name="1w2c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 3: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1w3d" name="1w3d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="1w3c" name="1w3c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1w3d" name="1w3d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1w3c" name="1w3c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 4: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1w4d" name="1w4d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="1w4c" name="1w4c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1w4d" name="1w4d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1w4c" name="1w4c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
         </div>
 
@@ -100,23 +101,23 @@
           </label>
           <div class="form-inline">
             <label> Class 1: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1s1d" name="1s1d" for="inlineFormInput" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="1s1c" name="1s1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1s1d" name="1s1d" for="inlineFormInput" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1s1c" name="1s1c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 2: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1s2d" name="1s2d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="1s2c" name="1s2c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1s2d" name="1s2d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1s2c" name="1s2c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 3: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1s3d" name="1s3d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="1s3c" name="1s3c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1s3d" name="1s3d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1s3c" name="1s3c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 4: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1s4d" name="1s4d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="1s4c" name="1s4c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1s4d" name="1s4d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="1s4c" name="1s4c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
         </div>
       </div>
@@ -130,23 +131,23 @@
           </label>
           <div class="form-inline">
             <label> Class 1: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="2f1d" name="2f1d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="2f1c" name="2f1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="2f1d" name="2f1d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="2f1c" name="2f1c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 2: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="2f2d" name="2f2d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="2f2c" name="2f2c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="2f2d" name="2f2d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="2f2c" name="2f2c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 3: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="2f3d" name="2f3d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="2f3c" name="2f3c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="2f3d" name="2f3d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="2f3c" name="2f3c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 4: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="2f4d" name="2f4d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="2f4c" name="2f4c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="2f4d" name="2f4d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="2f4c" name="2f4c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
         </div>
 
@@ -157,23 +158,23 @@
           </label>
           <div class="form-inline">
             <label> Class 1: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="2w1d" name="2w1d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="2w1c" name="2w1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="2w1d" name="2w1d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="2w1c" name="2w1c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 2: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="2w2d" name="2w2d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="2w2c" name="2w2c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="2w2d" name="2w2d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="2w2c" name="2w2c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 3: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="2w3d" name="2w3d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="2w3c" name="2w3c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="2w3d" name="2w3d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="2w3c" name="2w3c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 4: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="2w4d" name="2w4d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="2w4c" name="2w4c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="2w4d" name="2w4d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="2w4c" name="2w4c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
         </div>
 
@@ -184,23 +185,23 @@
           </label>
           <div class="form-inline">
             <label> Class 1: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="2s1d" name="2s1d" for="inlineFormInput" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="2s1c" name="2s1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="2s1d" name="2s1d" for="inlineFormInput" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="2s1c" name="2s1c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 2: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="2s2d" name="2s2d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="2s2c" name="2s2c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="2s2d" name="2s2d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="2s2c" name="2s2c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 3: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="2s3d" name="2s3d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="2s3c" name="2s3c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="2s3d" name="2s3d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="2s3c" name="2s3c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 4: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="2s4d" name="2s4d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="2s4c" name="2s4c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="2s4d" name="2s4d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="2s4c" name="2s4c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
         </div>
       </div>
@@ -214,23 +215,23 @@
           </label>
           <div class="form-inline">
             <label> Class 1: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="3f1d" name="3f1d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="3f1c" name="3f1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="3f1d" name="3f1d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="3f1c" name="3f1c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 2: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="3f2d" name="3f2d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="3f2c" name="3f2c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="3f2d" name="3f2d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="3f2c" name="3f2c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 3: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="3f3d" name="3f3d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="3f3c" name="3f3c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="3f3d" name="3f3d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="3f3c" name="3f3c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 4: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="3f4d" name="3f4d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="3f4c" name="3f4c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="3f4d" name="3f4d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="3f4c" name="3f4c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
         </div>
 
@@ -241,23 +242,23 @@
           </label>
           <div class="form-inline">
             <label> Class 1: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="3w1d" name="3w1d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="3w1c" name="3w1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="3w1d" name="3w1d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="3w1c" name="3w1c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 2: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="3w2d" name="3w2d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="3w2c" name="3w2c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="3w2d" name="3w2d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="3w2c" name="3w2c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 3: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="1w3d" name="3w3d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="3w3c" name="3w3c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="1w3d" name="3w3d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="3w3c" name="3w3c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 4: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="3w4d" name="3w4d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="3w4c" name="3w4c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="3w4d" name="3w4d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="3w4c" name="3w4c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
         </div>
 
@@ -268,23 +269,23 @@
           </label>
           <div class="form-inline">
             <label> Class 1: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="3s1d" name="3s1d" for="inlineFormInput" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="3s1c" name="3s1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="3s1d" name="3s1d" for="inlineFormInput" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="3s1c" name="3s1c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 2: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="3s2d" name="3s2d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="3s2c" name="3s2c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="3s2d" name="3s2d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="3s2c" name="3s2c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 3: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="3s3d" name="3s3d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="3s3c" name="3s3c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="3s3d" name="3s3d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="3s3c" name="3s3c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 4: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="3s4d" name="3s4d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="3s4c" name="3s4c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="3s4d" name="3s4d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="3s4c" name="3s4c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
         </div>
       </div>
@@ -298,23 +299,23 @@
           </label>
           <div class="form-inline">
             <label> Class 1: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="4f1d" name="4f1d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="4f1c" name="4f1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="4f1d" name="4f1d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="4f1c" name="4f1c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 2: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="4f2d" name="4f2d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="4f2c" name="4f2c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="4f2d" name="4f2d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="4f2c" name="4f2c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 3: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="4f3d" name="4f3d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="4f3c" name="4f3c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="4f3d" name="4f3d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="4f3c" name="4f3c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 4: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="4f4d" name="4f4d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="4f4c" name="4f4c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="4f4d" name="4f4d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="4f4c" name="4f4c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
         </div>
 
@@ -325,23 +326,23 @@
           </label>
           <div class="form-inline">
             <label> Class 1: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="4w1d" name="4w1d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="4w1c" name="4w1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="4w1d" name="4w1d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="4w1c" name="4w1c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 2: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="4w2d" name="4w2d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="4w2c" name="4w2c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="4w2d" name="4w2d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="4w2c" name="4w2c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 3: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="4w3d" name="4w3d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="4w3c" name="4w3c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="4w3d" name="4w3d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="4w3c" name="4w3c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 4: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="4w4d" name="4w4d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="4w4c" name="4w4c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="4w4d" name="4w4d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="4w4c" name="4w4c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
         </div>
 
@@ -352,23 +353,23 @@
           </label>
           <div class="form-inline">
             <label> Class 1: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="4s1d" name="4s1d" for="inlineFormInput" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="4s1c" name="4s1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="4s1d" name="4s1d" for="inlineFormInput" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="4s1c" name="4s1c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 2: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="4s2d" name="4s2d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="4s2c" name="4s2c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="4s2d" name="4s2d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="4s2c" name="4s2c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 3: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="4s3d" name="4s3d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="4s3c" name="4s3c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="4s3d" name="4s3d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="4s3c" name="4s3c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class 4: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="4s4d" name="4s4d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="4s4c" name="4s4c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="4s4d" name="4s4d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="4s4c" name="4s4c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
         </div>
       </div>
@@ -381,23 +382,23 @@
           </label>
           <div class="form-inline">
             <label> Class: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="a1d" name="a1d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="a1c" name="a1c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="a1d" name="a1d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="a1c" name="a1c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="a2d" name="a2d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="a2c" name="a2c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="a2d" name="a2d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="a2c" name="a2c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="a3d" name="a3d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="a3c" name="a3c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="a3d" name="a3d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="a3c" name="a3c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
           <div class="form-inline">
             <label> Class: </label>
-            <input type="text" style="width: 70px; text-transform: uppercase;" id="a4d" name="a4d" placeholder="Dept" class="form-control" value="<%=  %>">
-            <input type="text" style="width: 70px;" id="a4c" name="a4c" placeholder="XXXXX" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px; text-transform: uppercase;" id="a4d" name="a4d" placeholder="Dept" maxlength=4 autocomplete="off" class="form-control" value="<%=  %>">
+            <input type="text" style="width: 70px;" id="a4c" name="a4c" placeholder="XXXXX" maxlength=5 autocomplete="off" class="form-control" value="<%=  %>">
           </div>
         </div>-->
 

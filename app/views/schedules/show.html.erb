@@ -82,8 +82,9 @@
                 <% if slot.quarter == "f" && slot.year == "2"%>
                  <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
-                     <%= Course.find(slot.course_id).department %>
-                     <%= Course.find(slot.course_id).dept_code %>
+                     <%= Course.find(slot.course_id).name %> </br>
+                     (<%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>)
                    </a>
                  </button>
                  </br>
@@ -96,8 +97,9 @@
                 <% if slot.quarter == "w" && slot.year == "2"%>
                  <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
-                     <%= Course.find(slot.course_id).department %>
-                     <%= Course.find(slot.course_id).dept_code %>
+                     <%= Course.find(slot.course_id).name %> </br>
+                     (<%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>)
                    </a>
                  </button>
                 </br>
@@ -110,8 +112,9 @@
                 <% if slot.quarter == "s" && slot.year == "2"%>
                  <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
-                     <%= Course.find(slot.course_id).department %>
-                     <%= Course.find(slot.course_id).dept_code %>
+                     <%= Course.find(slot.course_id).name %> </br>
+                     (<%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>)
                    </a>
                  </button>
                  </br>
@@ -135,8 +138,9 @@
                 <% if slot.quarter == "f" && slot.year == "3"%>
                  <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
-                     <%= Course.find(slot.course_id).department %>
-                     <%= Course.find(slot.course_id).dept_code %>
+                     <%= Course.find(slot.course_id).name %> </br>
+                     (<%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>)
                    </a>
                  </button>
                  </br>
@@ -149,8 +153,9 @@
                 <% if slot.quarter == "w" && slot.year == "3"%>
                  <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
-                     <%= Course.find(slot.course_id).department %>
-                     <%= Course.find(slot.course_id).dept_code %>
+                     <%= Course.find(slot.course_id).name %> </br>
+                     (<%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>)
                    </a>
                  </button>
                 </br>
@@ -163,8 +168,9 @@
                 <% if slot.quarter == "s" && slot.year == "3"%>
                  <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
-                     <%= Course.find(slot.course_id).department %>
-                     <%= Course.find(slot.course_id).dept_code %>
+                     <%= Course.find(slot.course_id).name %> </br>
+                     (<%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>)
                    </a>
                  </button>
                  </br>
@@ -188,8 +194,9 @@
                 <% if slot.quarter == "f" && slot.year == "4"%>
                  <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
-                     <%= Course.find(slot.course_id).department %>
-                     <%= Course.find(slot.course_id).dept_code %>
+                     <%= Course.find(slot.course_id).name %> </br>
+                     (<%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>)
                    </a>
                  </button>
                  </br>
@@ -202,8 +209,9 @@
                 <% if slot.quarter == "w" && slot.year == "4"%>
                  <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
-                     <%= Course.find(slot.course_id).department %>
-                     <%= Course.find(slot.course_id).dept_code %>
+                     <%= Course.find(slot.course_id).name %> </br>
+                     (<%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>)
                    </a>
                  </button>
                 </br>
@@ -216,8 +224,9 @@
                 <% if slot.quarter == "s" && slot.year == "4"%>
                  <button class="btn btn-default btn-block" style="margin-bottom: -10px;">
                    <a href="/courses/<%= Course.find(slot.course_id).id %>">
-                     <%= Course.find(slot.course_id).department %>
-                     <%= Course.find(slot.course_id).dept_code %>
+                     <%= Course.find(slot.course_id).name %> </br>
+                     (<%= Course.find(slot.course_id).department %>
+                     <%= Course.find(slot.course_id).dept_code %>)
                    </a>
                  </button>
                  </br>
@@ -245,7 +254,7 @@
   </div>
 
   <!-- A Schedule has many slots -->
-
+ <!-- FOR LATER: Quick add a class into schedule
   <div class="row">
     <div class="col-md-8">
       <ul class="list-group">
@@ -255,10 +264,10 @@
 
         <li class="list-group-item">
           <form action="/create_slot" method="post">
-            <!-- Hidden input for authenticity token to protect from forgery -->
-            <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+            COMMENT: Hidden input for authenticity token to protect from forgery 
+            <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"
 
-            <!-- Label and input for schedule_id -->
+             COMMENT: Label and input for schedule_id
             <input type="hidden" name="schedule_id" value="<%= @schedule.id %>">
 
             <div class="form-group form-inline">
@@ -294,7 +303,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </div> -->
 
   <!-- A Schedule has many classes -->
 <!--  FOR LATER: Let people add additional classes they want to take on the side and quickadd into their schedule

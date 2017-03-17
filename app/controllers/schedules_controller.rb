@@ -49,9 +49,15 @@ class SchedulesController < ApplicationController
             @slot.year = @y.to_s
             @slot.quarter = quarters[@q]
             @slot.schedule_id = @schedule.id
-            @slot.course = Course.find_by({:department => params[@d], :dept_code => params[@c]})
+            @slot.course = Course.find_by({:department => params[@d].upcase.strip, :dept_code => params[@c]})
             if @slot.course
               @slot.save
+              if @slot.persisted?
+                Rails.logger.warn("created slot #{@slot.id}") #for debugging help
+              end
+            else
+              Rails.logger.warn("No course for @d #{params[@d]} @c #{params[@c]}") #for debugging help
+
             end
           end
           @s += 1
