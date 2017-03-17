@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root :to => "courses#index"
+  root :to => "schedules#index"
   # Routes for the Slot resource:
   # CREATE
   get "/slots/new", :controller => "slots", :action => "new"

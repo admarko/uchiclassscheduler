@@ -14,7 +14,6 @@
       </tr>
 
       <% @schedules.each do |schedule| %>
-      <% if schedule.student == current_user %>
       <tr>
         <td>
           <% if schedule.student.present? %>
@@ -31,7 +30,6 @@
           <% end %>
         </td>
       </tr>
-      <% end %>
       <% end %>
     </table>
     <%= paginate @schedules, theme: 'twitter-bootstrap-4' %>
