@@ -14,3 +14,4 @@ d.each do |k|
   Course.create(name: k.last["name"], dept_code: temp.last, department: temp.first)
 end
 Course.create(name: "Application Development", dept_code: "33610", department: "BUSN")
+Course.create(name: "Language of Space & Place", dept_code: "23600", department: "LING")
